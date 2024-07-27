@@ -1,0 +1,13 @@
+body {
+    background-color: #1a202c; /* Tailwind's gray-900 */
+    color: #edf2f7; /* Tailwind's gray-200 */
+}
+
+.fade-in-text {
+    animation: fadeIn 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
