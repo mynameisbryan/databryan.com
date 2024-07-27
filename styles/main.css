@@ -3,6 +3,18 @@ body {
     color: #edf2f1; /* Tailwind's gray-200 */
 }
 
+.logo {
+    width: 50%;
+    max-width: 300px; /* You can adjust this value */
+}
+
+@media (max-width: 640px) {
+    .logo {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
 .fade-in-text {
     animation: fadeIn 3s ease-in-out infinite;
 }
