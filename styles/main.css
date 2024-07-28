@@ -1,17 +1,32 @@
-.lexend-deca-header {
-    font-family: "Lexend Deca", sans-serif;
+:root {
+    --primary-bg-color: #020128;
+    --secondary-bg-color: #110c6c;
+    --text-color: #edf2f1;
+    --accent-color: #4fdea3;
+    --cursor-color: #ceedcf;
+    --font-primary: "Lexend Deca", sans-serif;
+    --font-secondary: "Lato", sans-serif;
+    --font-terminal: 'Courier New', Courier, monospace;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --container-bg-color: rgba(4, 4, 49, 0.3);
+    --container-border-color: rgba(4, 4, 49, 0.35);
+  }
+  
+  .lexend-deca-header {
+    font-family: var(--font-primary);
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
   }
-.lexend-deca-body {
-    font-family: "Lexend Deca", sans-serif;
+  
+  .lexend-deca-body {
+    font-family: var(--font-primary);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
-
-body, html {
+  
+  body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -20,11 +35,12 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #020128 25%, #110c6c 90%);
-    color: #edf2f1;
-}
-
-.background-container {
+    background: linear-gradient(135deg, var(--primary-bg-color) 25%, var(--secondary-bg-color) 90%);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+  }
+  
+  .background-container {
     position: relative;
     width: 100%;
     height: 100%;
@@ -33,99 +49,140 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.green-section, .white-section {
+  }
+  
+  .green-section, .white-section {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.green-section {
-    background-color: #4fdea3;
+    box-shadow: 0 4px 6px var(--shadow-color);
+  }
+  
+  .green-section {
+    background-color: var(--accent-color);
     clip-path: polygon(0 0, 70% 0, 0 70%);
-}
-
-.white-section {
-    background-color: #edf2f1;
+  }
+  
+  .white-section {
+    background-color: var(--text-color);
     clip-path: polygon(100% 100%, 40% 100%, 100% 40%);
-}
-
-
-
-.logo {
+  }
+  
+  .logo {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     width: 45%;
-    
-}
-
-.typing-container {
-    position: relative;
-    top: 25%;
-    width: 70%;
+    max-width: 400px;
+  }
+  
+  .typing-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     max-width: 600px;
     padding: 20px;
     text-align: left;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-terminal);
     font-size: 1.2rem;
-    color: #4fdea3; /* Classic green terminal text */
-    background-color: rgba(4, 4, 049, 0.3); /* Black background */
-    
-    border: 2px solid rgba(4, 4, 049, 0.35); 
+    color: var(--accent-color);
+    background-color: rgba(4, 4, 49, 0.8);
+    border: 2px solid var(--accent-color);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    
-    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(79, 222, 163, 0.5);
     opacity: 0;
-    transition: opacity 2s ease, max-height 2s ease;
+    transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease-in;
-}
-
-.cursor {
+  }
+  
+  .typing-container p {
+  
+    line-height: 1.5;
+  }
+  
+  
+  .terminal-box {
+    position: relative;
+    padding-top: 25px;
+  }
+  
+  .terminal-box::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff5f56;
+    border-radius: 50%;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  }
+  
+  .typing-container p {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap; /* Ensure correct handling of spaces and line breaks */
+  }
+  
+  
+  .visible {
+    opacity: 1;
+    max-height: 1000px;
+    padding: 20px;
+  }
+  
+  .cursor {
     display: inline-block;
     width: 2px;
     height: 1.5rem;
-    background-color: #ceedcf;
+    background-color: var(--cursor-color);
     vertical-align: bottom;
     opacity: 1;
-}
-
-.visible {
+    animation: blink 0.7s infinite;
+  }
+  
+  .visible {
     opacity: 1;
-}
-
-
-/* Media query for mobile devices */
-@media (max-width: 767px) {
-    
+  }
+  
+  @media (max-width: 767px) {
     .green-section {
-        background-color: #4fdea3;
-        clip-path: polygon(0 0, 100% 0, 0 40%);
+      clip-path: polygon(0 0, 100% 0, 0 40%);
     }
     
     .white-section {
-        background-color: #edf2f1;
-        clip-path: polygon(0 0, 100% 0, 0 40%);
-        clip-path: polygon(100% 100%, 10% 100%, 140% 40%);
+      clip-path: polygon(100% 100%, 10% 100%, 100% 60%);
     }
-
+  
     .logo {
-        width: 60%; /* Make the logo bigger on mobile */
-        top: 30%;
+      width: 50%;
+      top: 30%;
     }
-
+  
     .typing-container {
-        top: 10%;
-        font-size: 1rem;
-        padding: 15px;
+      width: 90%;
+      font-size: 1rem;
+      top: 45%;
     }
-}
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .logo {
+      width: 50%;
+      top: 28%;
+    }
+  
+    .typing-container {
+      top: 20%;
+      font-size: 1.1rem;
+    }
+  }
+  
