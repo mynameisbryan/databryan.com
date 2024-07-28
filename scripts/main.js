@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ease: "power2.inOut"
       }, "-=1.5");
       function typeText() {
-        const text = "Greetings traveler!\nYou have embarked on a journey through the universe of data.\nInitializing cutting-edge solutions tailored for your quest...\nHold on tight - Your adventure to unlock your data's potential is about to begin! ✨";
+        const text = "Greetings traveler!\nYou have embarked on a journey through the universe of data.\nInitializing cutting-edge solutions tailored for your quest...\nHold on tight - Our adventure to unlock your data's potential is about to begin! ✨";
         const typingSpeed = 55;
         const textElement = document.getElementById("typing-text");
         const cursorElement = document.getElementById("cursor");
