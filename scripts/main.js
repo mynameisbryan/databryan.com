@@ -42,11 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fr: "Salutations voyageur ! 🥖\nVous avez entrepris un voyage à travers l'univers des données.\nInitialisation des solutions de pointe adaptées à votre quête...\nTenez bon – notre aventure pour libérer le potentiel de vos données est sur le point de commencer ! ✨",
         ch: "Grüezi, Reisender! 🧀\nDu bisch uf ere epische Reise dür d'Universum vo de Date.\nMir si grad am ultra-moderni Lösige für dini Missioun initialisiere...\nHeb di fescht – üsi Abentüür, s'volle Potenzial vo dine Date freizgäh, fanged bald a! ✨",
         th: "สวัสดีนักเดินทาง! 🐘\nคุณได้เริ่มการเดินทางผ่านจักรวาลของข้อมูลแล้ว\nกำลังเริ่มโซลูชั่นล้ำสมัยที่ปรับแต่งตามภารกิจของคุณ...\nจับให้แน่น - การผจญภัยของเราเพื่อปลดล็อกศักยภาพของข้อมูลของคุณกำลังจะเริ่มขึ้น! ✨",
-        va: "Rytsas traveler! 🐉\nAo līr jaelza iā rinot dāria daor.\nInitialized arlīnari gēlio valonquar āttravesse ossi!\nĀeksio sagon tolvā - īlon rholagon iā embēssiot āsagon raqirot issa! ✨"
+        va: "Rytsas rhaenys! 🐉\nAo jurnegon mirre dorolvie lenton jaelza.\nArlīnagon gevives riña gēlio naejot nūmāzma issa...\nPār sōvīlībilāks - īlon jāelagon raqiros vestriar vaosagon issa! ✨"
     };
-    
-    
-    
     
     let typingInterval;
 
