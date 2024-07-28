@@ -7,12 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Futura:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
 </head>
-<body class="flex items-center justify-center min-h-screen">
-    <div class="text-center">
-        <img src="assets/databryan_logo_DataBryan.png" alt="DataBryan Logo" class="logo mx-auto mb-4">
-        <h1 class="text-4xl font-bold">Welcome to DataBryan.com</h1>
-        <p id="animated-text" class="mt-4 text-xl">This webpage is in development and will soon be here for you...</p>
+<body>
+    <div class="background-container">
+        <div class="green-section"></div>
+        <div class="white-section"></div>
+        <img src="assets/logo_text.png" alt="Logo" class="logo">
+        <div class="typing-container">
+            <p id="typing-text">🚀 [databryan]:~$ </p>
+            <span id="cursor" class="cursor"></span>
+        </div>
     </div>
     <script src="scripts/main.js"></script>
 </body>
