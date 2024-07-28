@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, "-=1.5");
       function typeText() {
         const text = "Greetings traveler!\nYou have embarked on a journey through the universe of data.\nInitializing cutting-edge solutions tailored for your quest...\nHold on tight - our adventure to unlock the full potential and value of your data is about to begin! ✨";
-        const typingSpeed = 85;
+        const typingSpeed = 55;
         const textElement = document.getElementById("typing-text");
         const cursorElement = document.getElementById("cursor");
         let index = 0;
