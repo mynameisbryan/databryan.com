@@ -1,243 +1,64 @@
 :root {
-    --primary-bg-color: #020128;
-    --secondary-bg-color: #110c6c;
-    --text-color: #edf2f1;
-    --accent-color: #4fdea3;
-    --cursor-color: #ceedcf;
-    --font-primary: "Lexend Deca", sans-serif;
-    --font-secondary: "Lato", sans-serif;
-    --font-terminal: 'Courier New', Courier, monospace;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --container-bg-color: rgba(4, 4, 49, 0.3);
-    --container-border-color: rgba(4, 4, 49, 0.35);
-  }
-  
-  .lexend-deca-header {
-    font-family: var(--font-primary);
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .lexend-deca-body {
-    font-family: var(--font-primary);
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  body, html {
+    --color-primary: #0078D4;
+    --color-secondary: #00B6B9;
+    --color-highlight: #FF6B35;
+    --color-dark: #1E1E1E;
+    --color-light: #F7F9FC;
+    --color-neutral: #A0AEC0;
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --font-code: "Fira Code", monospace;
+}
+
+body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary-bg-color) 25%, var(--secondary-bg-color) 90%);
-    color: var(--text-color);
-    font-family: var(--font-primary);
-  }
-  
-  .background-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    font-family: var(--font-secondary);
+}
+
+.site-header {
+    padding: 1rem;
+}
+
+.logo {
+    height: 48px;
+}
+
+.hero-section {
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-  }
-  
-  .green-section, .white-section {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0 4px 6px var(--shadow-color);
-  }
-  
-  .green-section {
-    background-color: var(--accent-color);
-    clip-path: polygon(0 0, 70% 0, 0 70%);
-  }
-  
-  .white-section {
-    background-color: var(--text-color);
-    clip-path: polygon(100% 100%, 40% 100%, 100% 40%);
-  }
-  
-  .logo {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    width: 45%;
-    max-width: 400px;
-  }
-  
-  .typing-container {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    text-align: left;
-    font-family: var(--font-terminal);
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    background-color: rgba(4, 4, 49, 0.8);
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(79, 222, 163, 0.5);
-    opacity: 0;
-    transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
-    max-height: 0;
-    overflow: hidden;
-  }
-  
-  .typing-container p {
-  
-    line-height: 1.5;
-  }
-  
-  
-  .terminal-box {
-    position: relative;
-    padding-top: 25px;
-  }
-  
-  .terminal-box::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    width: 12px;
-    height: 12px;
-    background-color: #ff5f56;
-    border-radius: 50%;
-    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
-  }
-  
-  .typing-container p {
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    white-space: pre-wrap; /* Ensure correct handling of spaces and line breaks */
-  }
-  
-  
-  .visible {
-    opacity: 1;
-    max-height: 1000px;
-    padding: 20px;
-  }
-  
-  .cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1.5rem;
-    background-color: var(--cursor-color);
-    vertical-align: bottom;
-    opacity: 1;
-    animation: blink 0.7s infinite;
-  }
-  
-  .visible {
-    opacity: 1;
-  }
-
-  .language-selector {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .language-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .language-button img {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .language-dropdown {
-    position: absolute;
-    width: 120px;
-    top: 60px;
-    right: 0;
-    background-color: var(--primary-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--accent-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border-radius: 8px;
-    font-family: var(--font-primary);
-    transition: opacity 0.3s ease;
-  }
-  
-  .language-option {
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
     align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.font-poppins {
+    font-family: var(--font-primary);
+}
+
+.font-inter {
+    font-family: var(--font-secondary);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.hero-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-highlight);
+    color: var(--color-light);
+    font-family: var(--font-primary);
+    font-weight: 500;
     transition: background-color 0.3s ease;
-  }
-  
-  .language-option img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-  
-  .language-option:hover {
-    background-color: var(--secondary-bg-color);
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  
-  @media (max-width: 767px) {
-    .green-section {
-      clip-path: polygon(0 0, 100% 0, 0 40%);
-    }
-    
-    .white-section {
-      clip-path: polygon(100% 100%, 10% 100%, 100% 60%);
-    }
-  
-    .logo {
-      width: 50%;
-      top: 30%;
-    }
-  
-    .typing-container {
-      width: 90%;
-      font-size: 1rem;
-      top: 45%;
-    }
-  }
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .logo {
-      width: 50%;
-      top: 28%;
-    }
-  
-    .typing-container {
-      top: 20%;
-      font-size: 1.0rem;
-    }
-  }
-  
+}
+
+.hero-button:hover {
+    background-color: var(--color-primary);
+}
+
