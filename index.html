@@ -13,18 +13,42 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
-    <header class="site-header">
-        <img src="assets/databryan_logo_text.png" alt="databryan Logo" class="logo">
-    </header>
-    <main class="hero-section">
-        <h1 class="font-poppins text-primary text-4xl md:text-5xl mb-4">From Data Chaos to AI-Ready</h1>
-        <p class="font-inter text-lg md:text-xl mb-6">Efficient, scalable data engineering for AI readiness.</p>
-        <a href="#" class="hero-button">Book Free AI Readiness Call</a>
-    </main>
+    <div class="background-container">
+        <div class="green-section" aria-hidden="true"></div>
+        <div class="white-section" aria-hidden="true"></div>
+        <header>
+            <img src="assets/logo_text.png" alt="databryan Logo" class="logo">
+            <div class="language-selector">
+                <button id="language-button" class="language-button">
+                    <img src="assets/flags/united-kingdom.png" alt="English" id="selected-flag">
+                </button>
+                <div id="language-dropdown" class="language-dropdown hidden">
+                    <div class="language-option" data-lang="en"><img src="assets/flags/united-kingdom.png" alt="English"> English</div>
+                    <div class="language-option" data-lang="de"><img src="assets/flags/germany.png" alt="German"> German</div>
+                    <div class="language-option" data-lang="ch"><img src="assets/flags/switzerland.png" alt="Swiss"> Swiss</div>
+                    <div class="language-option" data-lang="es"><img src="assets/flags/spain.png" alt="Spanish"> Spanish</div>
+                    <div class="language-option" data-lang="fr"><img src="assets/flags/france.png" alt="French"> French</div>
+                    <div class="language-option" data-lang="it"><img src="assets/flags/italy.png" alt="Italian"> Italian</div>
+                    <div class="language-option" data-lang="zh"><img src="assets/flags/china.png" alt="Chinese"> Chinese</div>
+                    <div class="language-option" data-lang="ru"><img src="assets/flags/russia.png" alt="Russian"> Russian</div>
+                    <div class="language-option" data-lang="hi"><img src="assets/flags/india.png" alt="Hindi"> Hindi</div>
+                    <div class="language-option" data-lang="th"><img src="assets/flags/thailand.png" alt="Thai"> Thai</div>
+                    <div class="language-option" data-lang="va"><img src="assets/flags/valyria.png" alt="Valyrian"> Valyrian</div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="typing-container" aria-label="Terminal-style text animation">
+                <p id="typing-text">🚀 [databryan]:~$ </p>
+                <span id="cursor" class="cursor"></span>
+            </div>
+        </main>
+    </div>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
-
