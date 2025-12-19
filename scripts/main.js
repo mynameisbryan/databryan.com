@@ -16,12 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
           duration: 2,
           opacity: 1,
           scale: 1.05,
-          ease: "power3.easeOut"
-      }, "-=1.5")
-      .to(".hero-content", {
-          duration: 2,
-          opacity: 1,
-          ease: "power2.inOut"
+          ease: "power3.easeOut"  
       }, "-=1.5")
       .to(".typing-container", {
           duration: 2,
@@ -100,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial typing animation for default language
     const changeBackgroundColor = () => {
         document.body.style.transition = 'background-color 2s';
-        document.body.style.backgroundColor = '#F7F9FC';
+        document.body.style.backgroundColor = '#072c71';
     };
 
     setTimeout(changeBackgroundColor, 1000);
